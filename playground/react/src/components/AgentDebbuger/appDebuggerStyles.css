@@ -1,0 +1,132 @@
+.actionWrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.title {
+    color: #7986f1;
+    border-bottom: 1px solid #333;
+}
+
+.inputSection {
+    margin: 20px 0 20px;
+}
+
+.inputTextarea {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    height: 200px;
+    border: 1px solid #333;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+
+.section {
+    margin: 20px 0 20px;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.sectionTitle {
+    color: #d8d5d5;
+    margin: 10px 0 10px;
+    font-size: 30px;
+}
+
+.listItem {
+    color: #999;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+}
+
+.agentName {
+    font-size: 22px;
+}
+
+.taskContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 5px 0 5px;
+}
+
+.taskDescription {
+    font-size: 22px;
+}
+
+.taskStatus {
+    border: 1px solid #6366f1;
+    background-color: #6366f1;
+    color: white;
+    padding: 5px 10px 5px;
+    border-radius: 10px;
+    display: flex;
+    font-size: 22px;
+    gap: 10px;
+    align-items: center;
+}
+
+.taskResult_Container {
+    padding-bottom: 15px;
+    margin-top: 30px;
+    border-bottom: 1px dotted #818181;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.last_child:last-child {
+    border-bottom: none;
+}
+
+.taskResult_response {
+    display: flex;
+    gap: 10px;
+}
+
+.subtitle {
+    font-size: 22px;
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+.noAvailableData {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 20px 0 20px;
+}
+
+@media (prefers-color-scheme: light) {
+    .title {
+        color: #6366f1;
+    }
+    .sectionTitle {
+        color: rgb(80, 77, 77);
+    }
+
+    .listItem {
+        color: #818181;
+    }
+
+    .inputTextarea {
+        color: #474646;
+        background-color: #ebeaea;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .taskResult_response {
+        display: block;
+    }
+}

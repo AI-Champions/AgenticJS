@@ -1,13 +1,13 @@
-import AgentsBoardDebugger from './AgentsBoardDebugger';
+import AgentsBoardDebugger from "./components/AgentDebbuger/AgentsBoardDebugger";
 import team from './teams/openai/productSpecsTeam';
+import "./index.css";
 
 function App() {
-  return (
-    <>
-      <h1>AgenticJS Playground</h1>
-      <AgentsBoardDebugger team={team}/>
-    </>
-  )
+    return (
+        <div className="mainContent">
+            <AgentsBoardDebugger team={team} />
+        </div>
+    );
 }
 
-export default App
+export default App;

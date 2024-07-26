@@ -1,31 +1,31 @@
 name: PR Validation CI
 
 on:
-  pull_request:
-    branches: [main]  # Triggered on PRs targeting these branches
+    pull_request:
+        branches: [main] # Triggered on PRs targeting these branches
 
 jobs:
-  build-and-test:
-    runs-on: ubuntu-latest
-    env:
-      OPENAI_API_KEY: "fake-api-key-so-we-can-use-ci-in-forked-repositories"
-      ANTHROPIC_API_KEY: "fake-api-key-so-we-can-use-ci-in-forked-repositories"
-      GOOGLE_API_KEY: "fake-api-key-so-we-can-use-ci-in-forked-repositories"
-      MISTRAL_API_KEY: "fake-api-key-so-we-can-use-ci-in-forked-repositories"
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+    build-and-test:
+        runs-on: ubuntu-latest
+        env:
+            OPENAI_API_KEY: "fake-api-key-so-we-can-use-ci-in-forked-repositories"
+            ANTHROPIC_API_KEY: "fake-api-key-so-we-can-use-ci-in-forked-repositories"
+            GOOGLE_API_KEY: "fake-api-key-so-we-can-use-ci-in-forked-repositories"
+            MISTRAL_API_KEY: "fake-api-key-so-we-can-use-ci-in-forked-repositories"
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v2
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '18'
+            - name: Set up Node.js
+              uses: actions/setup-node@v2
+              with:
+                  node-version: "18"
 
-    - name: Install dependencies
-      run: npm install --also=dev
+            - name: Install dependencies
+              run: npm install --also=dev
 
-    - name: Build for integration tests
-      run: npm run build:test
+            - name: Build for integration tests
+              run: npm run build:test
 
-    - name: Run integration tests
-      run: npm run test:integration
+            - name: Run integration tests
+              run: npm run test:integration
