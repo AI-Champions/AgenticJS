@@ -38,7 +38,6 @@ function generateConfig(format) {
       inlineDynamicImports: true,
       sourcemap: true,
       name: format === "umd" ? "KaibanJS" : undefined,
-      sourcemap: true,
     },
     external: external,
     plugins: [

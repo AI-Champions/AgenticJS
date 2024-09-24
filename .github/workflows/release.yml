@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'Enter the version for this release'
+        description: "Enter the version for this release"
         required: true
 
 jobs:
@@ -14,54 +14,54 @@ jobs:
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
       GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
-      MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}    
+      MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-      with:
-        ref: 'main'  # Ensures the main branch is checked out
-        token: ${{ secrets.PAT_GITHUB }}
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          ref: "main" # Ensures the main branch is checked out
+          token: ${{ secrets.PAT_GITHUB }}
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: '18'
-        registry-url: 'https://registry.npmjs.org/'
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "18"
+          registry-url: "https://registry.npmjs.org/"
 
-    - name: Reset local changes
-      run: |
-        git fetch origin main
-        git reset --hard origin/main
-        git clean -fdx        
+      - name: Reset local changes
+        run: |
+          git fetch origin main
+          git reset --hard origin/main
+          git clean -fdx
 
-    - name: Configure git user
-      run: |
-        git config user.name "Dariel Noel"
-        git config user.email "darielnoel@gmail.com"
+      - name: Configure git user
+        run: |
+          git config user.name "Dariel Noel"
+          git config user.email "darielnoel@gmail.com"
 
-    - name: Install dependencies
-      run: npm install --also=dev
+      - name: Install dependencies
+        run: npm install --also=dev
 
-    - name: Build production version
-      run: npm run build        
+      - name: Build production version
+        run: npm run build
 
-    - name: Display changes
-      run: |
-        echo "Showing status..."
-        git status
-        echo "Showing diff..."
-        git diff      
+      - name: Display changes
+        run: |
+          echo "Showing status..."
+          git status
+          echo "Showing diff..."
+          git diff
 
-    - name: Update package.json version and create Git tag
-      run: npm version ${{ github.event.inputs.version }}
+      - name: Update package.json version and create Git tag
+        run: npm version ${{ github.event.inputs.version }}
 
-    - name: Push changes and tags
-      run: |
-        git push origin main --follow-tags
-      env:
-        GITHUB_TOKEN: ${{ secrets.PAT_GITHUB }}        
+      - name: Push changes and tags
+        run: |
+          git push origin main --follow-tags
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT_GITHUB }}
 
-    - name: Publish to npm
-      run: npm publish
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Publish to npm
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

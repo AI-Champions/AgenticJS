@@ -1,16 +1,16 @@
 .spinner {
-    width: 1.8rem;
-    height: 1.8rem;
-    border-radius: 50%;
-    box-sizing: border-box;
-    border-top: 4px solid #fff;
-    border-left: 4px solid #fff;
-    border-right: 4px solid #ff00;
-    animation: spinner 0.7s infinite linear;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border-top: 4px solid #fff;
+  border-left: 4px solid #fff;
+  border-right: 4px solid #ff00;
+  animation: spinner 0.7s infinite linear;
 }
 
 @keyframes spinner {
-    to {
-        transform: rotate(360deg);
-    }
+  to {
+    transform: rotate(360deg);
+  }
 }

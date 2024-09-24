@@ -5,6 +5,7 @@ This document outlines the labels used in our GitHub repository to manage issues
 ## Label Categories
 
 ### Type
+
 - `bug`: Indicates an issue that represents a bug in the project.
 - `feature`: A request for new functionality.
 - `documentation`: Issues or PRs that solely relate to documentation improvements or corrections.
@@ -12,23 +13,27 @@ This document outlines the labels used in our GitHub repository to manage issues
 - `question`: Used when a contributor has a question about the project.
 
 ### Priority
+
 - `critical`: Issues or PRs that must be addressed immediately to resolve a severe impact on the project.
 - `high`: Important issues that affect the project significantly but are not immediately damaging.
 - `medium`: Issues that have a noticeable impact on the project but aren't urgent.
 - `low`: Minor issues that are considered low impact.
 
 ### Status
+
 - `help wanted`: Indicates that the maintainers seek external help to address the issue or implement the feature.
 - `good first issue`: Ideal for newcomers to the project.
 - `in progress`: Work has already begun on this issue or PR.
 - `on hold`: Issues or PRs that are not currently active but are planned for review later.
 
 ### Resolution
+
 - `wontfix`: The issue will not be addressed.
 - `duplicate`: Indicates that the issue is already reported or resolved in another issue or PR.
 - `invalid`: The issue is not relevant or is no longer applicable.
 
 ### Project Components
+
 - `landing-page`: Issues specifically related to the development and improvements of the project's landing page.
 - `library`: Issues and enhancements directly related to the codebase of the library component of the project.
 - `playground`: Pertains to the interactive examples or sandbox environments that allow for testing or playing with the project's features.
@@ -51,4 +56,3 @@ Contributors are encouraged to familiarize themselves with these labels to bette
 ## Feedback
 
 Feedback on the use of labels and suggestions for new labels are always welcome. Please submit any proposals for new labels or changes to existing labels as issues in this repository.
-

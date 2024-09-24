@@ -13,17 +13,20 @@ Before you start contributing, you'll need to set up your development environmen
 1. **Prerequisites**: Ensure you have Node.js (version 14 or later) and npm installed on your system.
 
 2. **Clone the Repository**: After forking, clone your fork of the KaibanJS repository:
+
    ```bash
    git clone https://github.com/kaiban-ai/KaibanJS.git
    cd KaibanJS
    ```
 
 3. **Install Main Dependencies**: In the root directory, run:
+
    ```bash
    npm install
    ```
 
 4. **Install Playground Dependencies**: Navigate to the playground/react folder and install its dependencies:
+
    ```bash
    cd playground/react
    npm install
@@ -53,11 +56,13 @@ Before you start contributing, you'll need to set up your development environmen
    Note: You only need to add the API keys for the services you'll be using in your examples.
 
 6. **Compile the Library**: In the root directory, run:
+
    ```bash
    npm run dev
    ```
 
 7. **Launch Storybook Playground**: Open another terminal window To open the Storybook playground, run:
+
    ```bash
    npm run play:sb
    ```
@@ -73,12 +78,13 @@ Now you're ready to start developing!
 2. **Branch Creation**: Create a new branch in your local repository for your work.
 
 3. **Development**: Make your changes in the newly created branch. You can use the Storybook playground to test your changes:
+
    - Create new stories in the `playground/react/src/stories` directory to test your use cases.
    - Refer to existing stories for examples of how to structure your new stories.
 
 4. **Write Tests**: Ensure that all tests pass when you run `npm test`. Add new tests for new functionality if necessary.
 
-5. **Document Your Changes**: Update the documentation to reflect any changes you've made. The documentation repository is located is [here](https://github.com/kaiban-ai/kaibanjs-docs.) 
+5. **Document Your Changes**: Update the documentation to reflect any changes you've made. The documentation repository is located is [here](https://github.com/kaiban-ai/kaibanjs-docs.)
 
 6. **Commit Messages**: Write clear and concise commit messages, describing what has changed and why.
 

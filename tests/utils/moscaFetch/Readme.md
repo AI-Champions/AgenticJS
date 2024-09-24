@@ -11,13 +11,12 @@
 - **Callbacks**: Execute custom logic after a mocked request is handled.
 - **Restore**: Cleanly revert any modifications to the global fetch, maintaining test isolation.
 
-
 ### Usage
 
 #### Importing
 
 ```js
-const { mock, record, restoreAll, getRecords } = require('moscaFetch');
+const { mock, record, restoreAll, getRecords } = require("moscaFetch");
 ```
 
 #### Mocking Requests
@@ -26,22 +25,22 @@ To mock HTTP requests:
 
 ```js
 mock({
-    url: 'https://api.example.com/data',
-    method: 'POST',
-    body: '*',
-    response: { key: 'value' },
-    callback: info => console.log('Request completed', info)
+  url: "https://api.example.com/data",
+  method: "POST",
+  body: "*",
+  response: { key: "value" },
+  callback: (info) => console.log("Request completed", info),
 });
 ```
 
-Or use wildcard * to mock all Request
+Or use wildcard \* to mock all Request
 
 ```js
 mock({
-    url: '*',
-    method: '*',
-    response: '*',
-    callback: info => console.log('Request completed', info)
+  url: "*",
+  method: "*",
+  response: "*",
+  callback: (info) => console.log("Request completed", info),
 });
 ```
 
@@ -53,22 +52,22 @@ Configuration Options
 - `response`: Response to return when a request is matched.
 - `callback`: Function to execute after a request is handled.
 
-
-#### Recording Requests 
+#### Recording Requests
 
 To record requests for later analysis or setup:
+
 ```js
 // Setting up recording
 record({
-    url: '*',
-    method: '*',
-    body: '*'  // Record any POST request to this URL
+  url: "*",
+  method: "*",
+  body: "*", // Record any POST request to this URL
 });
 
 // After your requests
 const recordedData = getRecords();
 debugger;
-console.log(recordedData); 
+console.log(recordedData);
 // Then Copy/Paste the object from the console
 ```
 

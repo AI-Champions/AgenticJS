@@ -7,35 +7,35 @@ import "../index.css";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 export default {
-    title: "Teams/Resume Creation Team",
-    component: AgentsBoardDebugger,
+  title: "Teams/Resume Creation Team",
+  component: AgentsBoardDebugger,
 };
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const withOpenAI = {
-    args: {
-        team: teamOpenAI,
-        title: "With OpenAI Model",
-    },
+  args: {
+    team: teamOpenAI,
+    title: "With OpenAI Model",
+  },
 };
 
 export const withHITLOpenAI = {
-    args: {
-        team: teamOpenAIHITL,
-        title: "With HITL and OpenAI Model",
-    },
+  args: {
+    team: teamOpenAIHITL,
+    title: "With HITL and OpenAI Model",
+  },
 };
 
 export const withCustomPromptsOpenAI = {
-    args: {
-        team: teamOpenAICustomPrompts,
-        title: "With Custom Prompts and OpenAI Model",
-    },
+  args: {
+    team: teamOpenAICustomPrompts,
+    title: "With Custom Prompts and OpenAI Model",
+  },
 };
 
 export const withReasoningModelsOpenAI = {
-    args: {
-        team: teamOpenAIReasoningModels,
-        title: "With OpenAI Reasoning Models",
-    },
+  args: {
+    team: teamOpenAIReasoningModels,
+    title: "With OpenAI Reasoning Models",
+  },
 };

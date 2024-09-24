@@ -1,80 +1,80 @@
 name: CI Environment Tests
 
-on: 
+on:
   workflow_dispatch:
 
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
-    env:  # Set the environment variable for all steps in this job
+    env: # Set the environment variable for all steps in this job
       OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-      VITE_OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}    
+      VITE_OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
     steps:
-    - name: Checkout KaibanJS Library
-      uses: actions/checkout@v2
-      with:
-        repository: kaiban-ai/KaibanJS
-        path: kaibanjs
+      - name: Checkout KaibanJS Library
+        uses: actions/checkout@v2
+        with:
+          repository: kaiban-ai/KaibanJS
+          path: kaibanjs
 
-    - name: Checkout KaibanJS-React-Vite Repository
-      uses: actions/checkout@v2
-      with:
-        repository: darielnoel/KaibanJS-React-Vite
-        token: ${{ secrets.GITHUB_TOKEN }} # This is needed to access the repository
-        path: react-vite-app
+      - name: Checkout KaibanJS-React-Vite Repository
+        uses: actions/checkout@v2
+        with:
+          repository: darielnoel/KaibanJS-React-Vite
+          token: ${{ secrets.GITHUB_TOKEN }} # This is needed to access the repository
+          path: react-vite-app
 
-    - name: Checkout KaibanJS-NodeJS Repository
-      uses: actions/checkout@v2
-      with:
-        repository: darielnoel/KaibanJS-NodeJS
-        token: ${{ secrets.GITHUB_TOKEN }} # This is needed to access the repository        
-        path: kaibanjs-nodejs        
+      - name: Checkout KaibanJS-NodeJS Repository
+        uses: actions/checkout@v2
+        with:
+          repository: darielnoel/KaibanJS-NodeJS
+          token: ${{ secrets.GITHUB_TOKEN }} # This is needed to access the repository
+          path: kaibanjs-nodejs
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v2
-      with:
-        node-version: 18.x
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18.x
 
-    - name: Build and Pack KaibanJS Library
-      run: |
-        cd kaibanjs
-        npm install
-        npm run build
-        npm pack
-      id: kaibanjs-build
-    
-    - name: Install other dependencies for React + Vite App
-      run: |
-        cd react-vite-app
-        npm install
+      - name: Build and Pack KaibanJS Library
+        run: |
+          cd kaibanjs
+          npm install
+          npm run build
+          npm pack
+        id: kaibanjs-build
 
-    - name: Install KaibanJS in React + Vite App using Pack
-      run: |
-        cd react-vite-app
-        npm install ../kaibanjs/*.tgz
+      - name: Install other dependencies for React + Vite App
+        run: |
+          cd react-vite-app
+          npm install
 
-    - name: Build React + Vite App
-      run: |
-        cd react-vite-app
-        npm run build
+      - name: Install KaibanJS in React + Vite App using Pack
+        run: |
+          cd react-vite-app
+          npm install ../kaibanjs/*.tgz
 
-    # - name: Run tests for React + Vite App
-    #   run: |
-    #     cd react-vite-app
-    #     npm test
+      - name: Build React + Vite App
+        run: |
+          cd react-vite-app
+          npm run build
 
-    # Handle NodeJS App after React + Vite App
-    - name: Install other dependencies for NodeJS App
-      run: |
-        cd kaibanjs-nodejs
-        npm install
+      # - name: Run tests for React + Vite App
+      #   run: |
+      #     cd react-vite-app
+      #     npm test
 
-    - name: Install KaibanJS in NodeJS App using Pack
-      run: |
-        cd kaibanjs-nodejs
-        npm install ../kaibanjs/*.tgz
+      # Handle NodeJS App after React + Vite App
+      - name: Install other dependencies for NodeJS App
+        run: |
+          cd kaibanjs-nodejs
+          npm install
 
-    - name: Test NodeJS App
-      run: |
-        cd kaibanjs-nodejs
-        npm test
+      - name: Install KaibanJS in NodeJS App using Pack
+        run: |
+          cd kaibanjs-nodejs
+          npm install ../kaibanjs/*.tgz
+
+      - name: Test NodeJS App
+        run: |
+          cd kaibanjs-nodejs
+          npm test

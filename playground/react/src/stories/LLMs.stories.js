@@ -10,62 +10,62 @@ import teamAzureOpenAI from "../teams/llms/azure_openai";
 import teamGroq from "../teams/llms/groq";
 
 export default {
-    title: "LLMs/Playground",
-    component: AgentsBoardDebugger,
+  title: "LLMs/Playground",
+  component: AgentsBoardDebugger,
 };
 
 export const withOpenAI = {
-    args: {
-        team: teamOpenAI,
-        title: "With OpenAI",
-    },
+  args: {
+    team: teamOpenAI,
+    title: "With OpenAI",
+  },
 };
 
 export const withAnthropic = {
-    args: {
-        team: teamAnthropic,
-        title: "With Anthropic",
-    },
+  args: {
+    team: teamAnthropic,
+    title: "With Anthropic",
+  },
 };
 
 export const withGemini = {
-    args: {
-        team: teamGemini,
-        title: "With Gemini",
-    },
+  args: {
+    team: teamGemini,
+    title: "With Gemini",
+  },
 };
 
 export const withMistral = {
-    args: {
-        team: teamMistral,
-        title: "With Mistral",
-    },
+  args: {
+    team: teamMistral,
+    title: "With Mistral",
+  },
 };
 
 export const withOllama = {
-    args: {
-        team: teamOllama,
-        title: "With Ollama",
-    },
+  args: {
+    team: teamOllama,
+    title: "With Ollama",
+  },
 };
 
 export const withCohere = {
-    args: {
-        team: teamCohere,
-        title: "With Cohere",
-    },
+  args: {
+    team: teamCohere,
+    title: "With Cohere",
+  },
 };
 
 export const withAzureOpenAI = {
-    args: {
-        team: teamAzureOpenAI,
-        title: "With Azure OpenAI",
-    },
+  args: {
+    team: teamAzureOpenAI,
+    title: "With Azure OpenAI",
+  },
 };
 
 export const withGroq = {
-    args: {
-        team: teamGroq,
-        title: "With Groq",
-    },
+  args: {
+    team: teamGroq,
+    title: "With Groq",
+  },
 };

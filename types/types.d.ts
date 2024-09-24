@@ -6,6 +6,7 @@ import type { AGENT_STATUS_enum } from "./enums.d.ts";
  * @typedef {any} TStore
  * @todo Implement various stores later on.
  */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type TStore = any;
 
 /**
@@ -35,6 +36,7 @@ export interface IBaseAgentParams {
   llmConfig?: ILLMConfig;
   maxIterations?: number;
   forceFinalAnswer?: boolean;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   llmInstance?: any;
 }
 
@@ -60,6 +62,7 @@ export declare class BaseAgent {
   id: string;
   store: TStore;
   status: AGENT_STATUS_enum;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   env: Record<string, any> | null;
   llmSystemMessage: string;
 
@@ -71,6 +74,7 @@ export declare class BaseAgent {
   llmConfig: ILLMConfig;
   maxIterations: number;
   forceFinalAnswer: boolean;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   llmInstance: any;
 
   /**
@@ -95,6 +99,7 @@ export declare class BaseAgent {
    * Sets the environment variables.
    * @param {Record<string, any>} env - The environment variables to be set.
    */
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   setEnv(env: Record<string, any>): void;
 }
 

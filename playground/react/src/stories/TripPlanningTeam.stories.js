@@ -5,21 +5,21 @@ import "../index.css";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
 export default {
-    title: "Teams/Trip Planning Team",
-    component: AgentsBoardDebugger,
+  title: "Teams/Trip Planning Team",
+  component: AgentsBoardDebugger,
 };
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const withOpenAI = {
-    args: {
-        team: teamOpenAI,
-        title: "With OpenAI Model",
-    },
+  args: {
+    team: teamOpenAI,
+    title: "With OpenAI Model",
+  },
 };
 
 export const withGemini = {
-    args: {
-        team: teamGemini,
-        title: "With Gemini Model",
-    },
+  args: {
+    team: teamGemini,
+    title: "With Gemini Model",
+  },
 };
