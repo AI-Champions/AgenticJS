@@ -76,6 +76,11 @@
       "types": "./dist/simple-rag-retrieve/index.d.ts",
       "import": "./dist/simple-rag-retrieve/index.esm.js",
       "require": "./dist/simple-rag-retrieve/index.cjs.js"
+    },
+    "./perplexity-search": {
+      "types": "./dist/perplexity-search/index.d.ts",
+      "import": "./dist/perplexity-search/index.esm.js",
+      "require": "./dist/perplexity-search/index.cjs.js"
     }
   },
   "files": [

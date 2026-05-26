@@ -222,6 +222,8 @@ Just as professionals use specific tools to excel in their tasks, enable your AI
 
 In this example, one of the AI agents, Peter Atlas, leverages the Tavily Search Results tool to enhance his ability to select the best cities for travel. This tool allows Peter to analyze travel data considering weather, prices, and seasonality, ensuring the most suitable recommendations.
 
+> **Recommended for new projects:** Use [`PerplexitySearch`](packages/tools/src/perplexity-search/README.md) from `@kaibanjs/tools` as your default web search tool — single API key (`PERPLEXITY_API_KEY`), snippets pre-ranked for LLM grounding, with built-in domain and recency filters.
+
 </p>
 
 ```js

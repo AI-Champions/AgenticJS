@@ -23,22 +23,25 @@ npm install @kaibanjs/tools
 
 Here's a list of all available tools. Click on the tool names to view their detailed documentation.
 
-| Tool                | Description                                                                     | Documentation                                |
-| ------------------- | ------------------------------------------------------------------------------- | -------------------------------------------- |
-| Exa                 | AI-focused search engine using embeddings to organize web data                  | [README](src/exa/README.md)                  |
-| Firecrawl           | Web scraping service for extracting structured data                             | [README](src/firecrawl/README.md)            |
-| GitHub Issues       | GitHub API integration for fetching and analyzing repository issues             | [README](src/github-issues/README.md)        |
-| Jina URL to MD      | Convert web content into clean, LLM-ready markdown using Jina.ai                | [README](src/jina-url-to-markdown/README.md) |
-| PDF Search          | Extract and search content from PDF documents                                   | [README](src/pdf-search/README.md)           |
-| Serper              | Google Search API integration with support for multiple search types            | [README](src/serper/README.md)               |
-| Simple RAG          | Basic Retrieval-Augmented Generation implementation for Q&A                     | [README](src/simple-rag/README.md)           |
-| Tavily Search       | AI-optimized search engine for comprehensive and accurate results               | [README](src/tavily/README.md)               |
-| Text File Search    | Search and analyze content within text files                                    | [README](src/textfile-search/README.md)      |
-| Website Search      | Semantic search within website content using RAG models                         | [README](src/website-search/README.md)       |
-| WolframAlpha        | Computational intelligence engine for complex queries and calculations          | [README](src/wolfram-alpha/README.md)        |
-| Zapier Webhook      | Integration with Zapier for workflow automation                                 | [README](src/zapier-webhook/README.md)       |
-| Make Webhook        | Integration with Make (formerly Integromat) for workflow automation             | [README](src/make-webhook/README.md)         |
-| Simple RAG Retrieve | Basic Retrieval-Augmented Generation implementation for Q&A with preloaded data | [README](src/simple-rag-retrieve/README.md)  |
+> **Recommended for general web search:** `PerplexitySearch` — single API key, snippets pre-ranked for LLM grounding, with domain and recency filters. Set `PERPLEXITY_API_KEY` (or `PPLX_API_KEY`) and you're done.
+
+| Tool                          | Description                                                                     | Documentation                                |
+| ----------------------------- | ------------------------------------------------------------------------------- | -------------------------------------------- |
+| Perplexity Search (recommended) | Web search via the Perplexity Search API with domain and recency filters        | [README](src/perplexity-search/README.md)    |
+| Exa                           | AI-focused search engine using embeddings to organize web data                  | [README](src/exa/README.md)                  |
+| Firecrawl                     | Web scraping service for extracting structured data                             | [README](src/firecrawl/README.md)            |
+| GitHub Issues                 | GitHub API integration for fetching and analyzing repository issues             | [README](src/github-issues/README.md)        |
+| Jina URL to MD                | Convert web content into clean, LLM-ready markdown using Jina.ai                | [README](src/jina-url-to-markdown/README.md) |
+| PDF Search                    | Extract and search content from PDF documents                                   | [README](src/pdf-search/README.md)           |
+| Serper                        | Google Search API integration with support for multiple search types            | [README](src/serper/README.md)               |
+| Simple RAG                    | Basic Retrieval-Augmented Generation implementation for Q&A                     | [README](src/simple-rag/README.md)           |
+| Tavily Search                 | AI-optimized search engine for comprehensive and accurate results               | [README](src/tavily/README.md)               |
+| Text File Search              | Search and analyze content within text files                                    | [README](src/textfile-search/README.md)      |
+| Website Search                | Semantic search within website content using RAG models                         | [README](src/website-search/README.md)       |
+| WolframAlpha                  | Computational intelligence engine for complex queries and calculations          | [README](src/wolfram-alpha/README.md)        |
+| Zapier Webhook                | Integration with Zapier for workflow automation                                 | [README](src/zapier-webhook/README.md)       |
+| Make Webhook                  | Integration with Make (formerly Integromat) for workflow automation             | [README](src/make-webhook/README.md)         |
+| Simple RAG Retrieve           | Basic Retrieval-Augmented Generation implementation for Q&A with preloaded data | [README](src/simple-rag-retrieve/README.md)  |
 
 ## Development
 

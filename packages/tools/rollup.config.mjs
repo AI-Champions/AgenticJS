@@ -23,6 +23,7 @@ const toolFolders = [
   'make-webhook',
   'jina-url-to-markdown',
   'simple-rag-retrieve',
+  'perplexity-search',
 ]; // Add more folder names as needed
 
 const toolConfigs = toolFolders.map((tool) => {
