@@ -19,8 +19,10 @@
 import { StructuredTool } from '@langchain/core/tools';
 import { z } from 'zod';
 import ky, { HTTPError } from 'ky';
+import packageJson from '../../package.json';
 
 const API_URL = 'https://api.perplexity.ai/search';
+const INTEGRATION_HEADER = `kaibanjs/${packageJson.version}`;
 
 /**
  * A single search result returned by the Perplexity Search API.
@@ -147,6 +149,7 @@ export class PerplexitySearch extends StructuredTool {
           headers: {
             Authorization: `Bearer ${this.apiKey}`,
             'Content-Type': 'application/json',
+            'X-Pplx-Integration': INTEGRATION_HEADER,
           },
         })
         .json<PerplexityApiResponse>();

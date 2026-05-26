@@ -29,8 +29,10 @@ import { Tool } from '@langchain/core/tools';
 import { z } from 'zod';
 import ky from 'ky';
 import { HTTPError } from 'ky';
+import packageJson from '../../package.json';
 
 const API_URL = 'https://api.perplexity.ai/search';
+const INTEGRATION_HEADER = `kaibanjs/${packageJson.version}`;
 
 export class PerplexitySearch extends Tool {
   constructor(fields = {}) {
@@ -85,6 +87,7 @@ export class PerplexitySearch extends Tool {
           headers: {
             Authorization: `Bearer ${this.apiKey}`,
             'Content-Type': 'application/json',
+            'X-Pplx-Integration': INTEGRATION_HEADER,
           },
         })
         .json();

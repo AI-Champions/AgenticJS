@@ -1,6 +1,7 @@
 const {
   PerplexitySearch,
 } = require('../../dist/perplexity-search/index.cjs.js');
+const { version: packageVersion } = require('../../package.json');
 
 describe('PerplexitySearch', () => {
   const sampleResults = [
@@ -48,6 +49,11 @@ describe('PerplexitySearch', () => {
     expect(capturedRequest.headers.get('Content-Type')).toBe(
       'application/json'
     );
+    const integrationHeader = capturedRequest.headers.get(
+      'X-Pplx-Integration'
+    );
+    expect(integrationHeader).toBe(`kaibanjs/${packageVersion}`);
+    expect(integrationHeader).toMatch(/^kaibanjs\//);
 
     const body = await capturedRequest.json();
     expect(body).toEqual({
