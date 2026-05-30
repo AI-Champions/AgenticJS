@@ -632,6 +632,72 @@ Join the [Discord community](https://www.kaibanjs.com/discord) to connect with o
 
 We welcome contributions from the community. Please read the [contributing guidelines](https://github.com/kaiban-ai/KaibanJS/blob/main/CONTRIBUTING.md) before submitting pull requests.
 
+## FAQ
+
+### General Questions
+
+**What is KaibanJS?**
+KaibanJS is a JavaScript-native framework for building and managing multi-agent systems. Inspired by the Kanban methodology, it helps you create, visualize, and manage AI agents, tasks, tools, and teams in real time.
+
+**How is KaibanJS different from LangChain or CrewAI?**
+KaibanJS is designed specifically for the JavaScript ecosystem, offering first-class support for front-end frameworks (React, Vue, Angular, NextJS). Unlike Python-first frameworks adapted for JS, KaibanJS provides a native JavaScript experience with real-time visualization and Kanban-style task management.
+
+**Is KaibanJS production-ready?**
+KaibanJS is in beta but used in production by many teams. The core API is stable, and the framework supports enterprise features like distributed execution, A2A/MCP integration, and real-time board synchronization.
+
+### Setup & Configuration
+
+**What are the system requirements?**
+- Node.js 16+ (Node.js 18+ recommended)
+- npm, yarn, or pnpm package manager
+- API key from an LLM provider (OpenAI, Anthropic, etc.)
+
+**How do I install KaibanJS?**
+```bash
+npx kaibanjs@latest init
+```
+This creates a new project with the Kaiban Board UI and necessary configuration files.
+
+**Can I use KaibanJS without the Kaiban Board?**
+Yes! KaibanJS can be used as a headless library. The Kaiban Board is optional and provides a visual interface for managing agents and tasks.
+
+### Agent Development
+
+**What types of agents does KaibanJS support?**
+KaibanJS supports multiple agent types:
+- **Standard Agents**: General-purpose AI agents powered by LLMs
+- **External Coding Agents**: Delegates tasks to local CLI tools like Claude Code or OpenCode
+- **Custom Agents**: Extend the base Agent class for specialized behavior
+
+**How do I integrate tools with agents?**
+Tools are integrated using the Tool API. You can create custom tools or use built-in tools for web search, file operations, and more. Tools are assigned to agents during creation.
+
+**Can I use local LLMs (Ollama, etc.)?**
+Yes! KaibanJS supports any LLM provider that exposes an OpenAI-compatible API. Configure your local model via environment variables or the `.env` file.
+
+### Deployment
+
+**How do I deploy KaibanJS applications?**
+KaibanJS applications can be deployed like any Node.js application:
+- **Local Development**: `npm run kaiban`
+- **Production**: Build with `npm run build` and deploy to any Node.js hosting platform
+- **Docker**: Use the provided Dockerfile for containerized deployment
+
+**Is there a cloud version?**
+KaibanJS is primarily self-hosted. You can deploy it to your own infrastructure or use cloud providers like AWS, GCP, or Azure.
+
+### Troubleshooting
+
+**Common Issues:**
+- **API Key Errors**: Ensure your LLM provider API key is correctly set in `.env`
+- **Port Conflicts**: The Kaiban Board runs on port 3000 by default. Change it via environment variables if needed
+- **Framework Compatibility**: KaibanJS aims to work with React, Vue, Angular, and NextJS. Report any issues on GitHub
+
+**Where can I get help?**
+- [Discord Community](https://www.kaibanjs.com/discord)
+- [GitHub Issues](https://github.com/kaiban-ai/KaibanJS/issues)
+- [Official Documentation](https://docs.kaibanjs.com)
+
 ## License
 
 KaibanJS is MIT licensed.
