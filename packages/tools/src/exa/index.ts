@@ -6,9 +6,12 @@
  * for AI applications.
  *
  * Key features:
+ * - Auto Search: Dynamically chooses the best search mode (default)
  * - Neural Search: Meaning-based search using embeddings
  * - Keyword Search: Traditional search capabilities
- * - Auto Search: Dynamically chooses between neural and keyword
+ * - Fast Search: Optimized for speed
+ * - Deep Search: Thorough search for comprehensive results
+ * - Instant Search: Near real-time results
  * - Category-focused search
  * - Domain filtering
  * - Date filtering
@@ -69,7 +72,7 @@ type ExaSearchToolResponse =
  * - keyword: Traditional keyword-based search
  * - auto: Automatically choose between neural and keyword
  */
-type ExaSearchToolType = 'neural' | 'keyword' | 'auto';
+type ExaSearchToolType = 'neural' | 'keyword' | 'auto' | 'fast' | 'deep' | 'instant';
 
 /**
  * Categories that can be used to filter search results
@@ -219,9 +222,9 @@ export class ExaSearch extends StructuredTool {
   constructor(fields: ExaSearchToolFields) {
     super();
 
-    if (fields.type && !['neural', 'keyword', 'auto'].includes(fields.type)) {
+    if (fields.type && !['neural', 'keyword', 'auto', 'fast', 'deep', 'instant'].includes(fields.type)) {
       throw new Error(
-        'Invalid search type. Must be one of: neural, keyword, auto'
+        'Invalid search type. Must be one of: neural, keyword, auto, fast, deep, instant'
       );
     }
 
@@ -229,7 +232,7 @@ export class ExaSearch extends StructuredTool {
     console.log(this.apiKey);
 
     // Configuration parameters in order of API documentation
-    this.type = fields.type || 'neural';
+    this.type = fields.type || 'auto';
     this.useAutoprompt = fields.useAutoprompt || false;
     this.category = fields.category;
     this.numResults = fields.numResults || 10;
