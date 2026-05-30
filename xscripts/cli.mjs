@@ -542,7 +542,7 @@ async function main() {
     if (command === 'init') {
       await initKaibanProject();
       td.signal('init_board');
-      runKaibanServer();
+//      runKaibanServer();
     } else {
       await initKaibanProject();
       td.signal('run_board');
