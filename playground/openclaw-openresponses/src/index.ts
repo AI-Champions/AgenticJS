@@ -43,7 +43,6 @@ function authMiddleware(
     return;
   }
   const token = auth.slice(7).trim();
-  console.log('token', token);
   if (token !== SECRET) {
     res.status(401).json({
       error: { message: 'Invalid token', type: 'authentication_error' },
