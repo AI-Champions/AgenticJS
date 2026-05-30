@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/kaiban-ai-kaibanjs-badge.png)](https://mseep.ai/app/kaiban-ai-kaibanjs)
+
 <p align="center">
   <a href="https://www.kaibanjs.com/">  
     <picture>
