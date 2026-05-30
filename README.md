@@ -621,8 +621,9 @@ console.log(writtenBy);
 Projects built by the KaibanJS community that extend the ecosystem:
 
 - [kaiban-distributed](https://github.com/andreibesleaga/kaiban-distributed) - Distributed actor-model runtime for KaibanJS teams with Redis/Kafka messaging, A2A/MCP integration, and real-time board synchronization.
+- [asqav](https://asqav.com) - Cryptographic audit trails for multi-agent task execution. Signs each task transition, agent handoff, and output so teams can prove their system's decisions to auditors or stakeholders.
 
-> Community-maintained project: ownership, roadmap, and support are managed by the project author.
+> Community-maintained projects: ownership, roadmap, and support are managed by the respective project authors.
 
 ## Community and Support
 
