@@ -17,6 +17,11 @@
       "import": "./dist/firecrawl/index.esm.js",
       "require": "./dist/firecrawl/index.cjs.js"
     },
+    "./crw": {
+      "types": "./dist/crw/index.d.ts",
+      "import": "./dist/crw/index.esm.js",
+      "require": "./dist/crw/index.cjs.js"
+    },
     "./tavily": {
       "types": "./dist/tavily/index.d.ts",
       "import": "./dist/tavily/index.esm.js",

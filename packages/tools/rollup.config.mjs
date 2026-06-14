@@ -10,6 +10,7 @@ import typescript from '@rollup/plugin-typescript';
 // Array of tool folder names
 const toolFolders = [
   'firecrawl',
+  'crw',
   'tavily',
   'serper',
   'exa',

@@ -10,6 +10,7 @@ export { PdfSearch } from './pdf-search';
 export { ZapierWebhook } from './zapier-webhook';
 export { MakeWebhook } from './make-webhook';
 export { Firecrawl } from './firecrawl';
+export { Crw } from './crw';
 export { TavilySearchResults } from './tavily';
 export { GithubIssues } from './github-issues';
 export { Serper } from './serper';

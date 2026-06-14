@@ -25,6 +25,7 @@ Here's a list of all available tools. Click on the tool names to view their deta
 
 | Tool                | Description                                                                     | Documentation                                |
 | ------------------- | ------------------------------------------------------------------------------- | -------------------------------------------- |
+| Crw                 | Firecrawl-compatible web scraper (single binary; self-host or cloud)            | [README](src/crw/README.md)                  |
 | Exa                 | AI-focused search engine using embeddings to organize web data                  | [README](src/exa/README.md)                  |
 | Firecrawl           | Web scraping service for extracting structured data                             | [README](src/firecrawl/README.md)            |
 | GitHub Issues       | GitHub API integration for fetching and analyzing repository issues             | [README](src/github-issues/README.md)        |
@@ -80,6 +81,7 @@ Create a `.env` file in the root directory with your API keys:
 
 ```env
 VITE_FIRECRAWL_API_KEY=your_firecrawl_api_key
+VITE_CRW_API_KEY=your_crw_api_key
 VITE_TAVILY_API_KEY=your_tavily_api_key
 VITE_SERPER_API_KEY=your_serper_api_key
 VITE_EXA_API_KEY=your_exa_api_key
