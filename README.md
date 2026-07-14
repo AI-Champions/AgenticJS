@@ -368,6 +368,42 @@ const mia = new Agent({
 });
 ```
 
+You can also point the OpenAI provider at any OpenAI-compatible Chat Completions endpoint with `apiBaseUrl`. For example, [DaoXE](https://daoxe.com) is a multi-model multi-protocol API gateway (`https://daoxe.com/v1`). Model IDs are account-scoped — use a model from authenticated `GET /v1/models` or your DaoXE dashboard (not a hardcoded public catalog). DaoXE is not available in mainland China.
+
+```js
+import { Agent, Task, Team } from 'kaibanjs';
+
+const agent = new Agent({
+  name: 'Mia',
+  role: 'Final Review',
+  goal: 'Ensure accuracy and completeness of the final document',
+  llmConfig: {
+    provider: 'openai',
+    // Account-scoped model ID from DaoXE (GET /v1/models or dashboard)
+    model: process.env.DAOXE_MODEL || 'your-account-model-id',
+    apiBaseUrl: 'https://daoxe.com/v1',
+  },
+});
+
+const task = new Task({
+  description: 'Review the draft for clarity and completeness.',
+  expectedOutput: 'A short review summary.',
+  agent,
+});
+
+const team = new Team({
+  name: 'DaoXE Review Team',
+  agents: [agent],
+  tasks: [task],
+  // KaibanJS maps openai + OPENAI_API_KEY; use your DaoXE key here
+  env: { OPENAI_API_KEY: process.env.DAOXE_API_KEY || 'your-daoxe-api-key' },
+});
+```
+
+DaoXE also publishes other protocol routes (for example Anthropic Messages) for clients that speak those APIs; with KaibanJS, the path above uses the OpenAI-compatible Chat Completions surface via `provider: 'openai'` and `apiBaseUrl`.
+
+Starters: [DaoXE-AI](https://github.com/seven7763/DaoXE-AI) · [Pricing](https://daoxe.com/pricing)
+
 _For further details on integrating diverse AI models with KaibanJS, please visit the [documentation](https://github.com/kaiban-ai/KaibanJS)._
 
   </details>
