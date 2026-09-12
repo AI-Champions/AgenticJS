@@ -25,6 +25,7 @@ Here's a list of all available tools. Click on the tool names to view their deta
 
 | Tool                | Description                                                                     | Documentation                                |
 | ------------------- | ------------------------------------------------------------------------------- | -------------------------------------------- |
+| Agent Guild         | Optional public endpoint observations and supplied-passport verification        | [README](src/agent-guild/README.md)          |
 | Exa                 | AI-focused search engine using embeddings to organize web data                  | [README](src/exa/README.md)                  |
 | Firecrawl           | Web scraping service for extracting structured data                             | [README](src/firecrawl/README.md)            |
 | GitHub Issues       | GitHub API integration for fetching and analyzing repository issues             | [README](src/github-issues/README.md)        |

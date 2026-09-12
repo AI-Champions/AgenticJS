@@ -17,3 +17,6 @@ export { WolframAlphaTool } from './wolfram-alpha';
 export { ExaSearch } from './exa';
 export { SimpleRAGRetrieve } from './simple-rag-retrieve';
 export { RAGToolkit } from './_utils/rag/ragToolkit';
+
+export { AgentGuildPreflight, AgentGuildVerifyPassport } from './agent-guild';
+export type { AgentGuildOptions } from './agent-guild';

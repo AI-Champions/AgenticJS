@@ -76,6 +76,11 @@
       "types": "./dist/simple-rag-retrieve/index.d.ts",
       "import": "./dist/simple-rag-retrieve/index.esm.js",
       "require": "./dist/simple-rag-retrieve/index.cjs.js"
+    },
+    "./agent-guild": {
+      "types": "./dist/agent-guild/index.d.ts",
+      "import": "./dist/agent-guild/index.esm.js",
+      "require": "./dist/agent-guild/index.cjs.js"
     }
   },
   "files": [

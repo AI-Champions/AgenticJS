@@ -9,6 +9,7 @@ import typescript from '@rollup/plugin-typescript';
 
 // Array of tool folder names
 const toolFolders = [
+  'agent-guild',
   'firecrawl',
   'tavily',
   'serper',
