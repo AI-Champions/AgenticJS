@@ -39,6 +39,7 @@ Here's a list of all available tools. Click on the tool names to view their deta
 | Zapier Webhook      | Integration with Zapier for workflow automation                                 | [README](src/zapier-webhook/README.md)       |
 | Make Webhook        | Integration with Make (formerly Integromat) for workflow automation             | [README](src/make-webhook/README.md)         |
 | Simple RAG Retrieve | Basic Retrieval-Augmented Generation implementation for Q&A with preloaded data | [README](src/simple-rag-retrieve/README.md)  |
+| You.com Search      | Web search API returning ranked results with titles, URLs, and snippets         | [README](src/you-search/README.md)           |
 
 ## Development
 
@@ -83,6 +84,7 @@ VITE_FIRECRAWL_API_KEY=your_firecrawl_api_key
 VITE_TAVILY_API_KEY=your_tavily_api_key
 VITE_SERPER_API_KEY=your_serper_api_key
 VITE_EXA_API_KEY=your_exa_api_key
+VITE_YOU_API_KEY=your_y..._key
 VITE_WOLFRAM_APP_ID=your_wolfram_app_id
 ```
 
